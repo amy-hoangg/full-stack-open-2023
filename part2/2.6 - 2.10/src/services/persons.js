@@ -1,27 +1,36 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3001/persons'
+
+const baseUrl = '/api/persons'
 
 const getAll = () => {
-  return axios.get(baseUrl)
+  const request = axios.get(baseUrl)
+  return request.then(response => response.data)
 }
 
 const create = newObject => {
-  return axios.post(baseUrl, newObject)
+  const request = axios.post(baseUrl, newObject)
+  return request.then(response => response.data)
 }
 
-const remove = (id) => {
-    const url = `${baseUrl}/${id}`
-    return axios.delete(url)
+const remove = id => {
+  const url = `${baseUrl}/${id}`
+  const request = axios.delete(url)
+  return request.then(response => response.data)
 }
 
-const update = (id, updatedPerson) => {
-    const url = `${baseUrl}/${id}`;
-    return axios.put(url, updatedPerson);
-  };
+const update = (id, updatedObject) => {
+  const url = `${baseUrl}/${id}`
+  const request = axios.put(url, updatedObject)
+  return request.then(response => response.data)
+}
 
-export default { 
-  getAll, 
+
+// Assign the object to a variable before exporting it as the default
+const personService = {
+  getAll,
   create,
+  update,
   remove,
-  update
-}
+};
+
+export default personService;

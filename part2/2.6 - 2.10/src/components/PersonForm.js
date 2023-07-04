@@ -1,19 +1,19 @@
-const PersonForm = (props) => {
-    const { addContact, newName, newNumber, handleNameInputChange, handleNumberInputChange } = props;
+const PersonForm = ({addPerson, newName, newNumber, setNewName, setNewNumber }) => {
     return (
-    <form onSubmit={addContact}>
+      <form onSubmit={addPerson}>
         <div>
-        name: <input value={newName} onChange={handleNameInputChange}/>
+          name: 
+          <input value={newName} onChange={({ target }) => setNewName(target.value)} />
         </div>
-
         <div>
-        number: <input value={newNumber} onChange={handleNumberInputChange}/>
+          number: 
+          <input value={newNumber} onChange={({ target }) => setNewNumber(target.value)} />
         </div>
-
         <div>
-        <button type="submit">add</button>
+          <button type="submit">add</button>
         </div>
-    </form>)
-}
-
-export default PersonForm 
+      </form>
+    )
+  }
+  
+  export default PersonForm
