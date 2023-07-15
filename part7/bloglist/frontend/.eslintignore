@@ -3,3 +3,4 @@ build
 .eslintrc.js
 e2e
 cypress
+src

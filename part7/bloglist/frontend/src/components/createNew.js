@@ -5,7 +5,7 @@ const CreateNew = ({
   newUrl,
   handleTitleChange,
   handleAuthorChange,
-  handleUrlChange
+  handleUrlChange,
 }) => {
   return (
     <div className="create-new">
@@ -14,7 +14,7 @@ const CreateNew = ({
         <div>
           title:
           <input
-            id='title'
+            id="title"
             type="text"
             value={newTitle}
             name="Title"
@@ -26,7 +26,7 @@ const CreateNew = ({
         <div>
           author:
           <input
-            id='author'
+            id="author"
             type="text"
             value={newAuthor}
             name="Author"
@@ -38,7 +38,7 @@ const CreateNew = ({
         <div>
           url:
           <input
-            id='url'
+            id="url"
             type="text"
             value={newUrl}
             name="Url"
@@ -51,7 +51,7 @@ const CreateNew = ({
         </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default CreateNew
+export default CreateNew;

@@ -1,0 +1,3 @@
+[submodule "query-anecdotes"]
+	path = query-anecdotes
+	url = /Users/amyo/Documents/fullstack2023/part6/query-anecdotes
