@@ -1,8 +1,8 @@
 import { View, StyleSheet } from 'react-native';
 
-import theme from '../../../theme';
-import Text from '../../BaseComponents/Text';
-import formatInThousands from '../../../utils/formatInThousand';
+import theme from '../../../../theme';
+import Text from '../../../BaseComponents/Text';
+import formatInThousands from '../../../../utils/formatInThousand';
 
 const styles = StyleSheet.create({
   container: {
